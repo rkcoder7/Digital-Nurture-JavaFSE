@@ -9,34 +9,20 @@
 </head>
 <body class="bg-light py-5">
 
-  <div class="container">
+  <div class="container"> 
     <h3 class="fw-bold mb-2">Bootstrap 5 Accordion</h3>
     <p class="text-muted mb-5">
       The accordion uses the <strong>collapse</strong> JavaScript plugin.
       Only one panel stays open at a time (controlled via <code>data-bs-parent</code>).
     </p>
 
-    <!-- ══════════════════════════════════════════════════════
-         ACCORDION 1 — Standard FAQ Accordion
-    ═══════════════════════════════════════════════════════ -->
     <h5 class="fw-semibold mb-3">FAQ Accordion</h5>
 
-    <!--
-      .accordion            → wrapper for all accordion items
-      id="faqAccordion"     → referenced by data-bs-parent to ensure only 1 item open at a time
-    -->
     <div class="accordion mb-5" id="faqAccordion">
 
       <!-- ── Item 1 ── -->
       <div class="accordion-item">
-        <!--
-          .accordion-header  → the clickable header bar
-          .accordion-button  → the actual button; Bootstrap toggles .collapsed on it
-          data-bs-toggle="collapse"           → activates collapse plugin
-          data-bs-target="#collapseOne"       → which panel to show/hide
-          aria-expanded="true"                → first item starts open
-          aria-controls="collapseOne"         → accessibility
-        -->
+
         <h2 class="accordion-header">
           <button
             class="accordion-button"
@@ -49,12 +35,7 @@
             What is Bootstrap 5?
           </button>
         </h2>
-        <!--
-          .accordion-collapse  → the collapsible panel
-          .collapse            → hidden by default
-          .show                → makes the panel visible on page load
-          data-bs-parent="#faqAccordion" → collapses siblings when this opens
-        -->
+
         <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
           <div class="accordion-body">
             Bootstrap 5 is the latest major version of the popular CSS framework
