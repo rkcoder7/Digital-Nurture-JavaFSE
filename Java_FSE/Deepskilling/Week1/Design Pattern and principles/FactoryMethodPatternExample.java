@@ -40,7 +40,6 @@ class ExcelDocument implements Document {
     }
 }
 
-/** Creator declares the factory method that subclasses override to produce a specific Document. */
 abstract class DocumentFactory {
     public abstract Document createDocument();
 }
