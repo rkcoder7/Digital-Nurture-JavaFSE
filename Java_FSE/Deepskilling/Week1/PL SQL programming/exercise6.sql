@@ -1,0 +1,26 @@
+DECLARE
+CURSOR c1 IS SELECT * FROM Transactions;
+BEGIN
+FOR r IN c1 LOOP
+DBMS_OUTPUT.PUT_LINE(r.TransactionID);
+END LOOP;
+END;
+/
+DECLARE
+CURSOR c2 IS SELECT AccountID FROM Accounts;
+BEGIN
+FOR r IN c2 LOOP
+UPDATE Accounts SET Balance=Balance-100 WHERE AccountID=r.AccountID;
+END LOOP;
+END;
+/
+DECLARE
+CURSOR c3 IS SELECT LoanID FROM Loans;
+BEGIN
+FOR r IN c3 LOOP
+UPDATE Loans SET InterestRate=InterestRate+0.5 WHERE LoanID=r.LoanID;
+END LOOP;
+END;
+/
+SELECT * FROM Accounts;
+SELECT * FROM Loans;
