@@ -1,0 +1,18 @@
+package com.observer;
+
+public class WebApp implements Observer {
+
+    private String userName;
+
+    public WebApp(String userName) {
+        this.userName = userName;
+    }
+
+    @Override
+    public void update(double stockPrice) {
+        System.out.println(
+                userName +
+                " received update on Web App: Stock Price = "
+                + stockPrice);
+    }
+}
